@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Movies";
+}
+<h1>@ViewBag.Title.</h1>
+
+<table>
+    <tr>
+    <thead>
+        @ViewBag.Title
+    </thead>
+    </tr>
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <td>@movie.Name</td>
+        </tr>
+    }
+
+</table>
