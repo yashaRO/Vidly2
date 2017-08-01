@@ -1,18 +1,20 @@
 ﻿@{
     ViewBag.Title = "Movies";
 }
-<h1>@ViewBag.Title.</h1>
+<h1>@ViewBag.Title</h1>
 
-<table>
-    <tr>
+<table class="table table-bordered table-hover">
     <thead>
-        @ViewBag.Title
+        <tr>
+            <th>@ViewBag.Title</th>
+            <th>Genre</th>
+        </tr>
     </thead>
-    </tr>
     @foreach (var movie in Model)
     {
         <tr>
-            <td>@movie.Name</td>
+            <td>@Html.ActionLink((string) movie.Name, "Details", "Movie", new { id = movie.Id }, null)</td>
+            <td>@movie.Genre</td>
         </tr>
     }
 

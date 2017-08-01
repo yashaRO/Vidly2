@@ -3,16 +3,18 @@
 }
 <h1>@ViewBag.Title.</h1>
 
-<table>
-    <tr>
-        <thead>
-            @ViewBag.Title
-        </thead>
-    </tr>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@ViewBag.Title</th>
+            <th>Discount Rate</th>
+        </tr>
+    </thead>
     @foreach (var customer in Model)
     {
         <tr>
-            <td>@Html.ActionLink((string)customer.Name, "Details", "Customer", new { id = customer.Id}, null)</td>
+            <td>@Html.ActionLink((string) customer.Name, "Details", "Customer", new {id = customer.Id}, null)</td>
+            <td>@customer.MembershipType.Name</td>
         </tr>
     }
 

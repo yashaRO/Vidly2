@@ -9,28 +9,31 @@ namespace Vidly.Controllers
 {
     public class MovieController : Controller
     {
-        // GET: Movie
+        private ApplicationDbContext _context;
+
+        public MovieController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public ActionResult Index()
         {
-            var movies = GetMovies();
+            var movies = _context.Movies.ToList();
+
             return View(movies);
         }
 
-        public IEnumerable<Movie> GetMovies()
+        public ActionResult Details(int id)
         {
-            List<Movie> movies = new List<Movie>
-            {
-                new Movie("Big Momma's House"),
-                new Movie("Big Momma's Heart Surgery"),
-                new Movie("Big Momma's Funeral"),
-                new Movie("Big Momma isn't Dead!?"),
-                new Movie("Big Momma's Seance"),
-                new Movie("Big Momma's a Demon"),
-                new Movie("Big Momma's Defiled Corpse"),
-                new Movie("Big Momma's Finally Laid to Rest")
-            };
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
 
-            return movies;
+            return View(movie);
         }
+
     }
 }

@@ -196,10 +196,68 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707310408094_InitialModel.cs" />
+    <Compile Include="Migrations\201707310408094_InitialModel.Designer.cs">
+      <DependentUpon>201707310408094_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010054151_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201708010054151_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201708010054151_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010058072_AddMembershipType.cs" />
+    <Compile Include="Migrations\201708010058072_AddMembershipType.Designer.cs">
+      <DependentUpon>201708010058072_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010101123_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201708010101123_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201708010101123_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010152345_ApplyAnnotationsToCustomer.cs" />
+    <Compile Include="Migrations\201708010152345_ApplyAnnotationsToCustomer.Designer.cs">
+      <DependentUpon>201708010152345_ApplyAnnotationsToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010458260_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201708010458260_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201708010458260_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010459501_AddNameDataToMembershipTypes.cs" />
+    <Compile Include="Migrations\201708010459501_AddNameDataToMembershipTypes.Designer.cs">
+      <DependentUpon>201708010459501_AddNameDataToMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010831107_AddDateTimeToCustomers.cs" />
+    <Compile Include="Migrations\201708010831107_AddDateTimeToCustomers.Designer.cs">
+      <DependentUpon>201708010831107_AddDateTimeToCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010837060_AddDateTimeDataToCustomers.cs" />
+    <Compile Include="Migrations\201708010837060_AddDateTimeDataToCustomers.Designer.cs">
+      <DependentUpon>201708010837060_AddDateTimeDataToCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010935031_AddMoviesToDatabase.cs" />
+    <Compile Include="Migrations\201708010935031_AddMoviesToDatabase.Designer.cs">
+      <DependentUpon>201708010935031_AddMoviesToDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708010939126_AddMovieDataToMovies.cs" />
+    <Compile Include="Migrations\201708010939126_AddMovieDataToMovies.Designer.cs">
+      <DependentUpon>201708010939126_AddMovieDataToMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708011023528_MissingStockFromMovie.cs" />
+    <Compile Include="Migrations\201708011023528_MissingStockFromMovie.Designer.cs">
+      <DependentUpon>201708011023528_MissingStockFromMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708011039021_MissingStockFromMovieTRY2.cs" />
+    <Compile Include="Migrations\201708011039021_MissingStockFromMovieTRY2.Designer.cs">
+      <DependentUpon>201708011039021_MissingStockFromMovieTRY2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708011039393_AddedStockDataToMovies.cs" />
+    <Compile Include="Migrations\201708011039393_AddedStockDataToMovies.Designer.cs">
+      <DependentUpon>201708011039393_AddedStockDataToMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -263,6 +321,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +340,50 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707310408094_InitialModel.resx">
+      <DependentUpon>201707310408094_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010054151_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201708010054151_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010058072_AddMembershipType.resx">
+      <DependentUpon>201708010058072_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010101123_PopulateMembershipTypes.resx">
+      <DependentUpon>201708010101123_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010152345_ApplyAnnotationsToCustomer.resx">
+      <DependentUpon>201708010152345_ApplyAnnotationsToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010458260_AddNameToMembershipType.resx">
+      <DependentUpon>201708010458260_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010459501_AddNameDataToMembershipTypes.resx">
+      <DependentUpon>201708010459501_AddNameDataToMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010831107_AddDateTimeToCustomers.resx">
+      <DependentUpon>201708010831107_AddDateTimeToCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010837060_AddDateTimeDataToCustomers.resx">
+      <DependentUpon>201708010837060_AddDateTimeDataToCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010935031_AddMoviesToDatabase.resx">
+      <DependentUpon>201708010935031_AddMoviesToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708010939126_AddMovieDataToMovies.resx">
+      <DependentUpon>201708010939126_AddMovieDataToMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708011023528_MissingStockFromMovie.resx">
+      <DependentUpon>201708011023528_MissingStockFromMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708011039021_MissingStockFromMovieTRY2.resx">
+      <DependentUpon>201708011039021_MissingStockFromMovieTRY2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708011039393_AddedStockDataToMovies.resx">
+      <DependentUpon>201708011039393_AddedStockDataToMovies.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
